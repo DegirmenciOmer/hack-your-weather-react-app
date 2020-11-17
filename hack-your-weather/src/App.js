@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import CityList from "./CityList.js";
+import CitySrc from "./CitySrc";
 import Header from "./Header.js";
 
 function App() {
   return (
     <>
       <Header />
-      <CityList />
+      <CitySrc />
     </>
   );
 }
