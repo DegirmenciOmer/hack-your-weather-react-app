@@ -2,25 +2,25 @@
 li {
   list-style: none;
 }
+
+input{
+  width: 100%;
+}
 .hdr {
   display: flex;
   justify-content: center;
 }
-.root {
+.root, form, .src-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.city-list {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
+
+body {
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,0.6474789744999563) 0%, rgba(72,133,116,0.7707283597032564) 100%); }
 .city-item {
-  height: 30vmin;
-  pointer-events: none;
   border: 1px solid;
   margin-top: 5px;
   padding: 7px;

@@ -15,7 +15,7 @@ export default function CitySrc() {
 
   useEffect(() => {
     const getCityWeather = async () => {
-      console.log("url", url);
+      //console.log("url", url);
 
       if (url) {
         setLoading(true);
@@ -40,7 +40,7 @@ export default function CitySrc() {
     getCityWeather();
   }, [url]);
   return (
-    <div>
+    <div className="src-container">
       <Input changeUrl={changeUrl} />
       {cityData && <CityItem key={cityId} cityData={cityData} />}
       {hasError.status && <p className="Err">OOPS!!! {hasError.message}</p>}

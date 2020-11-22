@@ -3,7 +3,6 @@ import React, { useState } from "react";
 export default function Input({ changeUrl }) {
   const [cityName, setCityName] = useState("");
   const API_KEY = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
-  console.log(API_KEY);
   return (
     <form
       onSubmit={(e) => {
@@ -13,15 +12,14 @@ export default function Input({ changeUrl }) {
         );
       }}
     >
-      <div>
-        <input
-          type="text"
-          onChange={(e) => {
-            setCityName(e.target.value);
-          }}
-        />
-      </div>
-      <input type="submit"></input>
+      <input
+        placeholder="Enter a valid city name"
+        type="text"
+        onChange={(e) => {
+          setCityName(e.target.value);
+        }}
+      />
+      <input value="Send" type="submit" />
     </form>
   );
 }
