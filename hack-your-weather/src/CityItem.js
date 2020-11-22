@@ -1,12 +1,7 @@
 import React from "react";
 
 const CityItem = ({ cityData }) => {
-  //const { name, sys, weather, main, coord } = cityData;
-  const weather = cityData.weather;
-  const name = cityData.name;
-  const sys = cityData.sys;
-  const coord = cityData.coord;
-  const main = cityData.main;
+  const { name, sys, weather, main, coord } = cityData;
   return (
     <li className="city-item">
       <h2>
