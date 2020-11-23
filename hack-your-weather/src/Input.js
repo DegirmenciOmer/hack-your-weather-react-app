@@ -19,7 +19,7 @@ export default function Input({ changeUrl }) {
           setCityName(e.target.value);
         }}
       />
-      <input value="Send" type="submit" />
+      <input disabled={cityName.length < 1} value="Search City" type="submit" />
     </form>
   );
 }

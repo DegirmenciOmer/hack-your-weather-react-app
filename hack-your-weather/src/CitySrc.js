@@ -3,9 +3,9 @@ import CityItem from "./CityItem";
 import Input from "./Input";
 
 export default function CitySrc() {
+  const [cityUl, setCityUl] = useState([]);
   const [url, setUrl] = useState();
   const [cityData, setCityData] = useState();
-  const [cityId, setCityId] = useState();
   const [isLoading, setLoading] = useState(false);
   const [hasError, setError] = useState({ status: false, message: "" });
 
@@ -15,8 +15,6 @@ export default function CitySrc() {
 
   useEffect(() => {
     const getCityWeather = async () => {
-      //console.log("url", url);
-
       if (url) {
         setLoading(true);
         try {
@@ -27,8 +25,9 @@ export default function CitySrc() {
             setError({ status: false, message: "" });
             const data = await response.json();
             console.log(data);
-            setCityData(data);
-            setCityId(data.id);
+            setCityUl([data, ...cityUl]);
+            console.log(cityUl);
+
             setLoading(false);
           }
         } catch (error) {
@@ -42,7 +41,20 @@ export default function CitySrc() {
   return (
     <div className="src-container">
       <Input changeUrl={changeUrl} />
-      {cityData && <CityItem key={cityId} cityData={cityData} />}
+      <ul id="city-ul">
+        {cityUl &&
+          cityUl.map((cityItem) => {
+            return (
+              <li className="city-item" key={cityItem.id}>
+                <CityItem
+                  cityData={cityItem}
+                  setCityUl={setCityUl}
+                  cityUl={cityUl}
+                />
+              </li>
+            );
+          })}
+      </ul>
       {hasError.status && <p className="Err">OOPS!!! {hasError.message}</p>}
       {isLoading && <p>Loading ...</p>}
     </div>
