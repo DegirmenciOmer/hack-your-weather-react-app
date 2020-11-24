@@ -13,13 +13,19 @@ export default function Input({ changeUrl }) {
       }}
     >
       <input
+        id="src-text"
         placeholder="Enter a valid city name"
         type="text"
         onChange={(e) => {
           setCityName(e.target.value);
         }}
       />
-      <input disabled={cityName.length < 1} value="Search City" type="submit" />
+      <input
+        id="src-btn"
+        disabled={cityName.length < 1}
+        value="Search City"
+        type="submit"
+      />
     </form>
   );
 }

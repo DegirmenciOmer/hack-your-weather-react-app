@@ -1,5 +1,6 @@
 * {
   padding: 0%;
+  color: rgb(2, 27, 109);
 }
 body{
   box-sizing: border-box;
@@ -9,12 +10,11 @@ li {
   list-style: none;
 }
 
-input{
-  width: 100%;
-}
+
 .hdr {
   display: flex;
   justify-content: center;
+  margin: 50px 0px;
 }
 .root, form, .src-container, .city-item {
   display: flex;
@@ -22,6 +22,37 @@ input{
   align-items: center;
   justify-content: center;
 }
+
+form {
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0px 0px 50px;
+
+}
+
+input {
+  border: none;
+margin: 3px 5px;
+height: 40px;
+border-radius: 15px;
+padding: 0px 10px;
+text-align: center;
+width: 222px;
+-moz-box-shadow:    inset 0 0 4px rgb(2, 27, 109);
+-webkit-box-shadow: inset 0 0 4px rgb(2, 27, 109);
+box-shadow:         inset 0 0 4px rgb(2, 27, 109);
+
+transition: .6s;
+
+ }
+
+ input:hover{
+  border: 2px rgb(2, 27, 109) solid;
+  -moz-box-shadow:    inset 0 0 10px rgb(2, 27, 109);
+  -webkit-box-shadow: inset 0 0 10px rgb(2, 27, 109);
+  box-shadow:         inset 0 0 10px rgb(2, 27, 109);
+
+ }
 
 
 body {
@@ -34,10 +65,21 @@ body {
   margin-top: 5px;
   padding: 7px;
   align-items: flex-start;
-  border: 2px solid #000;
+  border: 2px rgb(2, 27, 109) solid;
   border-radius: 4%;
   width: 100%;
+  transition: .7s;
 }
+
+.city-item:hover{
+   -moz-box-shadow:    inset 0 0 10px rgb(2, 27, 109);
+   -webkit-box-shadow: inset 0 0 10px rgb(2, 27, 109);
+   box-shadow:         inset 0 0 10px rgb(2, 27, 109);
+
+  }
+  
+
+  
 
 .city-item p{
 line-height: 7px;
@@ -50,4 +92,29 @@ border: ridge;
 border-radius: 22%;
 padding: 0 5px;
 transition: 1s;
+font-weight: 600;
+border: 2px rgb(2, 27, 109) solid;
 }
+
+#close:hover{
+background-color: darkred;
+border-color:gainsboro;
+color: gainsboro;
+}
+
+@media (min-width: 480px) { 
+  form {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  #src-text {
+    width: 300px;
+  }
+  
+  #src-btn {
+    width: 100px;
+
+}
+  
+ }
