@@ -2,6 +2,7 @@
   padding: 0%;
   color: rgb(2, 27, 109);
 }
+
 body{
   box-sizing: border-box;
 }
@@ -10,12 +11,12 @@ li {
   list-style: none;
 }
 
-
 .hdr {
   display: flex;
   justify-content: center;
   margin: 50px 0px;
 }
+
 .root, form, .src-container, .city-item {
   display: flex;
   flex-direction: column;
@@ -32,18 +33,16 @@ form {
 
 input {
   border: none;
-margin: 3px 5px;
-height: 40px;
-border-radius: 15px;
-padding: 0px 10px;
-text-align: center;
-width: 222px;
--moz-box-shadow:    inset 0 0 4px rgb(2, 27, 109);
--webkit-box-shadow: inset 0 0 4px rgb(2, 27, 109);
-box-shadow:         inset 0 0 4px rgb(2, 27, 109);
-
-transition: .6s;
-
+  margin: 3px 5px;
+  height: 40px;
+  border-radius: 15px;
+  padding: 0px 10px;
+  text-align: center;
+  width: 222px;
+  -moz-box-shadow: inset 0 0 4px rgb(2, 27, 109);
+  -webkit-box-shadow: inset 0 0 4px rgb(2, 27, 109);
+  box-shadow: inset 0 0 4px rgb(2, 27, 109);
+  transition: .6s;
  }
 
  input:hover{
