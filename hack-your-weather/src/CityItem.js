@@ -1,7 +1,7 @@
 import React from "react";
 
-const CityItem = ({ cityData, setCityUl, cityUl }) => {
-  const { name, sys, weather, main, coord } = cityData;
+const CityItem = ({ cityItem, setCityUl, cityUl }) => {
+  const { name, sys, weather, main, coord } = cityItem;
   function handleRemove(id) {
     const newList = cityUl.filter((item) => item.id !== id);
     setCityUl(newList);
@@ -11,7 +11,7 @@ const CityItem = ({ cityData, setCityUl, cityUl }) => {
       <button
         id="close"
         type="button"
-        onClick={() => handleRemove(cityData.id)}
+        onClick={() => handleRemove(cityItem.id)}
       >
         X
       </button>

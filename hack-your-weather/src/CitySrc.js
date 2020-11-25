@@ -5,7 +5,6 @@ import Input from "./Input";
 export default function CitySrc() {
   const [cityUl, setCityUl] = useState([]);
   const [url, setUrl] = useState();
-  const [cityData, setCityData] = useState();
   const [isLoading, setLoading] = useState(false);
   const [hasError, setError] = useState({ status: false, message: "" });
 
@@ -37,6 +36,7 @@ export default function CitySrc() {
       }
     };
     getCityWeather();
+    // eslint-disable-next-line
   }, [url]);
   return (
     <div className="src-container">
@@ -47,7 +47,7 @@ export default function CitySrc() {
             return (
               <li className="city-item" key={cityItem.id}>
                 <CityItem
-                  cityData={cityItem}
+                  cityItem={cityItem}
                   setCityUl={setCityUl}
                   cityUl={cityUl}
                 />
