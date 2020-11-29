@@ -17,6 +17,10 @@ li {
   margin: 50px 0px;
 }
 
+.error-message {
+  color: red;
+}
+
 .root, form, .src-container, .city-item {
   display: flex;
   flex-direction: column;

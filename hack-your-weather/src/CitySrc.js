@@ -6,7 +6,7 @@ export default function CitySrc() {
   const [cityUl, setCityUl] = useState([]);
   const [url, setUrl] = useState();
   const [isLoading, setLoading] = useState(false);
-  const [hasError, setError] = useState({ status: false, message: "" });
+  const [hasError, setError] = useState({ status: false });
 
   const changeUrl = (url) => {
     setUrl(url);
@@ -18,19 +18,19 @@ export default function CitySrc() {
         setLoading(true);
         try {
           const response = await fetch(url);
-          if (!response.ok) {
-            setError(true, "response ok!");
-          } else {
-            setError({ status: false, message: "" });
+          console.log(response);
+          setLoading(false);
+          if (response.ok) {
+            setError({ status: false });
             const data = await response.json();
             console.log(data);
             setCityUl([data, ...cityUl]);
             console.log(cityUl);
-
-            setLoading(false);
+          } else {
+            setError(true);
           }
         } catch (error) {
-          setError({ status: true, message: error.message });
+          setError({ status: true });
           setLoading(false);
         }
       }
@@ -41,6 +41,8 @@ export default function CitySrc() {
   return (
     <div className="src-container">
       <Input changeUrl={changeUrl} />
+      {hasError && <p className="error-message">City not found! {hasError}</p>}
+      {isLoading && <p>Loading ...</p>}
       <ul id="city-ul">
         {cityUl &&
           cityUl.map((cityItem) => {
@@ -55,8 +57,6 @@ export default function CitySrc() {
             );
           })}
       </ul>
-      {hasError.status && <p className="Err">OOPS!!! {hasError.message}</p>}
-      {isLoading && <p>Loading ...</p>}
     </div>
   );
 }
