@@ -6,7 +6,7 @@ export default function CitySrc() {
   const [cityUl, setCityUl] = useState([]);
   const [url, setUrl] = useState();
   const [isLoading, setLoading] = useState(false);
-  const [hasError, setError] = useState({ status: false });
+  const [hasError, setError] = useState(false);
 
   const changeUrl = (url) => {
     setUrl(url);
@@ -21,7 +21,7 @@ export default function CitySrc() {
           console.log(response);
           setLoading(false);
           if (response.ok) {
-            setError({ status: false });
+            setError(false);
             const data = await response.json();
             console.log(data);
             setCityUl([data, ...cityUl]);
@@ -30,7 +30,7 @@ export default function CitySrc() {
             setError(true);
           }
         } catch (error) {
-          setError({ status: true });
+          setError(true);
           setLoading(false);
         }
       }
