@@ -76,7 +76,7 @@ export default function WeatherChart({ match }) {
         />
       </AreaChart>
       <Link to="/">
-        <button>Back</button>
+        <button className="back">Back</button>
       </Link>
     </div>
   );
