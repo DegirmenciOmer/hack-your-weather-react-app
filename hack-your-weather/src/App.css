@@ -21,7 +21,7 @@ li {
   color: red;
 }
 
-.root, form, .src-container, .city-item {
+.root, form, .src-container, .city-item, .chart-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@ form {
 
 }
 
-input {
+input, button {
   border: none;
   margin: 3px 5px;
   height: 40px;
@@ -49,12 +49,12 @@ input {
   transition: .6s;
  }
 
- input:hover{
+ input, button:hover{
   border: 2px rgb(2, 27, 109) solid;
   -moz-box-shadow:    inset 0 0 10px rgb(2, 27, 109);
   -webkit-box-shadow: inset 0 0 10px rgb(2, 27, 109);
   box-shadow:         inset 0 0 10px rgb(2, 27, 109);
-
+  font-weight: bold;
  }
 
 
@@ -75,17 +75,23 @@ body {
 }
 
 .city-item:hover{
-   -moz-box-shadow:    inset 0 0 10px rgb(2, 27, 109);
-   -webkit-box-shadow: inset 0 0 10px rgb(2, 27, 109);
-   box-shadow:         inset 0 0 10px rgb(2, 27, 109);
+  -moz-box-shadow:    inset 0 0 10px rgb(2, 27, 109);
+  -webkit-box-shadow: inset 0 0 10px rgb(2, 27, 109);
+  box-shadow:         inset 0 0 10px rgb(2, 27, 109);
 
-  }
-  
-
+}
   
 
 .city-item p{
 line-height: 7px;
+}
+
+.chart-container {
+  margin-top: 40px;
+}
+
+.chart{
+  margin: 82px 5px 72px;
 }
 
 #close {

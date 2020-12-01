@@ -8,7 +8,7 @@ export default function Input({ changeUrl }) {
       onSubmit={(e) => {
         e.preventDefault();
         changeUrl(
-          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`
         );
       }}
     >

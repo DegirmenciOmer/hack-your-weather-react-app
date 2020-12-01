@@ -1,14 +1,21 @@
 import React from "react";
 import "./App.css";
-import CitySrc from "./CitySrc";
-import Header from "./Header.js";
+import CitySrc from "./components/CitySrc";
+import Header from "./components/Header.js";
+import WeatherChart from "./components/Chart";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Header />
-      <CitySrc />
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Header />
+          <CitySrc />
+        </Route>
+        <Route path="/:cityId" component={WeatherChart} />
+      </Switch>
+    </Router>
   );
 }
 

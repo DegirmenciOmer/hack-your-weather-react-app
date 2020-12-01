@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CityItem = ({ cityItem, setCityUl, cityUl }) => {
   const { name, sys, weather, main, coord } = cityItem;
@@ -15,9 +16,12 @@ const CityItem = ({ cityItem, setCityUl, cityUl }) => {
       >
         X
       </button>
-      <h2>
-        {name}, {sys.country}
-      </h2>
+      <Link to={`/${cityItem.id}`}>
+        {" "}
+        <h2>
+          {name}, {sys.country}
+        </h2>
+      </Link>
       <div className="weather-desc">
         <h3>{weather[0].main}</h3>
         <p>{weather[0].description}</p>

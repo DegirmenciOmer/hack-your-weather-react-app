@@ -23,7 +23,6 @@ export default function CitySrc() {
           if (response.ok) {
             setError(false);
             const data = await response.json();
-            console.log(data);
             setCityUl([data, ...cityUl]);
             console.log(cityUl);
           } else {
