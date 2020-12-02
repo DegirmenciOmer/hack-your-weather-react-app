@@ -7,6 +7,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 export default function WeatherChart({ match }) {
@@ -51,30 +52,30 @@ export default function WeatherChart({ match }) {
       {hasError && (
         <p className="error-message">Something went wrong... {hasError}</p>
       )}
-
-      <AreaChart
-        className="chart"
-        width={1000}
-        height={500}
-        data={cityList}
-        margin={{
-          top: 10,
-          right: 30,
-          left: 0,
-          bottom: 0,
-        }}
-      >
-        <CartesianGrid />
-        <XAxis dataKey="dt_txt" />
-        <YAxis dataKey="main.temp" />
-        <Tooltip />
-        <Area
-          type="monotone"
-          dataKey="main.temp"
-          stroke="#990000"
-          fill="#ff8000"
-        />
-      </AreaChart>
+      <div style={{ width: "100%", height: 500 }}>
+        <ResponsiveContainer>
+          <AreaChart
+            data={cityList}
+            margin={{
+              top: 10,
+              right: 30,
+              left: 0,
+              bottom: 0,
+            }}
+          >
+            <CartesianGrid />
+            <XAxis dataKey="dt_txt" />
+            <YAxis dataKey="main.temp" />
+            <Tooltip />
+            <Area
+              type="monotone"
+              dataKey="main.temp"
+              stroke="#990000"
+              fill="#ff8000"
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
       <Link to="/">
         <button className="back">Back</button>
       </Link>
