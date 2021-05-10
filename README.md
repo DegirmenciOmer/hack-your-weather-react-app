@@ -28,12 +28,18 @@
 \$ git clone https://github.com/DegirmenciOmer/Chack-your-weather-react-app.git
 
 ## Features
-
+-   Display each city in its own box
+-   Each box should contain the following pieces of data:
+    -   `city name`
+    -   `country name`
+    -   `weather main`
+    -   `weather desciption`
+    -   `max and min temprature`
+    -   `location (longitude and lattitude)`
 - Any time a user searches for a new city, add it to a list of already searched cities
+- Only allow a user to use the "Search City" button when the input field has at least 1 character.
 - Allow a user to delete a search entry, by clicking the "X" button
-- Only allow a user to use the "Search City" button when the input field has at least 1 character
 
-(Hint: Remember the first number indicates the amount of RED, the second number indicates the amount of GREEN, and the third number indicates the amount of BLUE.)
 
 ## Screenshots
 
