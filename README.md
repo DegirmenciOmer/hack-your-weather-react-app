@@ -43,8 +43,10 @@
 
 ## Screenshots
 
-![Example screenshot](./assets/Hard.png)
-![Example screenshot](./assets/easy.png)
+![Example screenshot](./hack-your-weather/public/image.png)
+![Example screenshot](./hack-your-weather/public/image2.png)
+![Example screenshot](./hack-your-weather/public/Screenshot_20210510_191614_com.android.chrome.jpg)
+![Example screenshot](./hack-your-weather/public/Screenshot_20210510_191731_com.android.chrome.jpg)
 
 ## On mobile :
 
