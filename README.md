@@ -43,12 +43,11 @@
 
 ## Screenshots
 
-![Example screenshot](./hack-your-weather/public/image.png)
 ![Example screenshot](./hack-your-weather/public/image2.png)
-![Example screenshot](./hack-your-weather/public/Screenshot_20210510_191614_com.android.chrome.jpg)
-![Example screenshot](./hack-your-weather/public/Screenshot_20210510_191731_com.android.chrome.jpg)
+
+
 
 ## On mobile :
 
-![Example screenshot](./assets/mobile-hard.jpeg)
-![Example screenshot](./assets/mobile-easy.jpeg)
+<br/> 
+<img src="./hack-your-weather/public/Screenshot_20210510_191731_com.android.chrome.jpg" width="200" />
